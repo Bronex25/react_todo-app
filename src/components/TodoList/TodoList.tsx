@@ -19,11 +19,7 @@ export const TodoList: React.FC = () => {
   }, [todos, filter]);
 
   return (
-    <section
-      className="todoapp__main"
-      data-cy="TodoList"
-      hidden={todos.length === 0}
-    >
+    <section className="todoapp__main" data-cy="TodoList">
       {filteredTodos.map(todo => (
         <TodoItem key={todo.id} todo={todo} />
       ))}
